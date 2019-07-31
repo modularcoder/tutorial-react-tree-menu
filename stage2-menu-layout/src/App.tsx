@@ -6,6 +6,8 @@ import Drawer from '@material-ui/core/Drawer';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography'
 
+import AppMenu from './AppMenu'
+
 const App: React.FC = () => {
   const classes = useStyles();
 
@@ -18,7 +20,7 @@ const App: React.FC = () => {
           paper: classes.drawerPaper
         }}
       >
-        <Typography>I'm the Sidebar</Typography>
+        <AppMenu />
       </Drawer>
       <main className={classes.content}>
         <Container maxWidth="lg" className={classes.container}>
