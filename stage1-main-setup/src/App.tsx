@@ -44,6 +44,8 @@ const useStyles = makeStyles(theme => ({
     width: drawerWidth,
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+    background: '#535454',
+    color: '#fff',
   },
   content: {
     flexGrow: 1,
