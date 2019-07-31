@@ -29,9 +29,6 @@ const App: React.FC = () => {
   );
 }
 
-export default App;
-
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -57,3 +54,5 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(4),
   },
 }));
+
+export default App;
