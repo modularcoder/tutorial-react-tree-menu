@@ -29,7 +29,7 @@ export type AppMenuItemProps = PropTypes.InferProps<typeof AppMenuItemPropTypes>
 }
 
 const AppMenuItem: React.FC<AppMenuItemProps> = props => {
-  const { name, link, Icon, items = [] } = props
+  const { name, Icon, items = [] } = props
   const classes = useStyles()
   const isExpandable = items && items.length > 0
   const [open, setOpen] = React.useState(false)
@@ -39,14 +39,14 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
   }
 
   const MenuItemRoot = (
-    <ListItem className={classes.menuItem} onClick={handleClick}>
+    <ListItem button className={classes.menuItem} onClick={handleClick}>
       {/* Display an icon if any */}
       {!!Icon && (
-        <ListItemIcon className={classes.menuItem}>
+        <ListItemIcon className={classes.menuItemIcon}>
           <Icon />
         </ListItemIcon>
       )}
-      <ListItemText primary={name} />
+      <ListItemText primary={name} inset={!Icon} />
       {/* Display the expand menu if the item has children */}
       {isExpandable && !open && <IconExpandMore />}
       {isExpandable && open && <IconExpandLess />}
@@ -57,8 +57,8 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
     <Collapse in={open} timeout="auto" unmountOnExit>
       <Divider />
       <List component="div" disablePadding>
-        {items.map(item => (
-          <AppMenuItem {...item} key={item.name} isOpen={open} />
+        {items.map((item, index) => (
+          <AppMenuItem {...item} key={index} />
         ))}
       </List>
     </Collapse>
@@ -74,17 +74,9 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
 
 const useStyles = makeStyles(theme =>
   createStyles({
-    menuItem: {
-      position: 'relative',
-      '&.active': {
-        background: 'rgba(0, 0, 0, 0.08)',
-        '& .MuiListItemIcon-root': {
-          color: '#fff',
-        },
-      },
-    },
+    menuItem: {},
     menuItemIcon: {
-      color: '##97c05c',
+      color: '#97c05c',
     },
   }),
 )

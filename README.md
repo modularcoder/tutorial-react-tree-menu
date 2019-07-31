@@ -1,7 +1,6 @@
-# Tutorial: ReactJS multi-level navigation menu with MaterialUI & TypeScript 
+# Tutorial: ReactJS multi-level navigation menu with MaterialUI & TypeScript
 
 Building a ReactJS multi-level navigation menu with MaterialUI & TypeScript
-
 
 ## Author Hints
 
@@ -12,7 +11,6 @@ If the single stage hase same file multiple variations, which should be embedded
 ...etc
 
 This Allow to embed same file multiple versions into the article
-
 
 Medium Code Embeds:
 
@@ -27,3 +25,5 @@ https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/maste
 Stage 3
 
 https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage3-recursive-menu-item?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenuItem-v1-proptypes.tsx&view=editor
+
+https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage3-recursive-menu-item?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenuItem-v2-implementation.tsx&view=editor
