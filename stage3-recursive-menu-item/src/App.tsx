@@ -1,15 +1,15 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Drawer from '@material-ui/core/Drawer';
-import Container from '@material-ui/core/Container';
+import React from 'react'
+import clsx from 'clsx'
+import { makeStyles } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Drawer from '@material-ui/core/Drawer'
+import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 
 import AppMenu from './AppMenu'
 
 const App: React.FC = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={clsx('App', classes.root)}>
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Drawer
         variant="permanent"
         classes={{
-          paper: classes.drawerPaper
+          paper: classes.drawerPaper,
         }}
       >
         <AppMenu />
@@ -28,10 +28,10 @@ const App: React.FC = () => {
         </Container>
       </main>
     </div>
-  );
+  )
 }
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,6 +55,6 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },
-}));
+}))
 
-export default App;
+export default App

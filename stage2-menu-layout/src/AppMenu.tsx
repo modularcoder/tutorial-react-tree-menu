@@ -72,12 +72,12 @@ const AppMenu: React.FC = () => {
         </List>
       </Collapse>
     </List>
-  );
+  )
 }
 
 const drawerWidth = 240
 
-const useStyles = makeStyles((theme) =>
+const useStyles = makeStyles(theme =>
   createStyles({
     appMenu: {
       width: '100%',
@@ -86,11 +86,11 @@ const useStyles = makeStyles((theme) =>
       width: drawerWidth,
     },
     menuItem: {
-      width: drawerWidth
+      width: drawerWidth,
     },
     menuItemIcon: {
       color: '#97c05c',
-    }
+    },
   }),
 )
 
