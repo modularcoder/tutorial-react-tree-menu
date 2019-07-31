@@ -25,3 +25,5 @@ Stage 2
 https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage2-menu-layout?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenu.tsx&view=editor
 
 Stage 3
+
+https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage3-recursive-menu-item?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenuItem-v1-proptypes.tsx&view=editor
