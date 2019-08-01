@@ -13,12 +13,13 @@ export const AppMenuItemPropTypes = {
 // TypeScript compile-time props type, infered from propTypes
 // https://dev.to/busypeoples/notes-on-typescript-inferring-react-proptypes-1g88
 export type AppMenuItemProps = PropTypes.InferProps<typeof AppMenuItemPropTypes> & {
-  Icon?: React.ComponentType<SvgIconProps>
   items?: AppMenuItemProps[]
 }
 
-const AppMenuItem: React.FC<AppMenuItemProps> = props => {
+const AppMenuItem: React.FC<AppMenuItemProps> = (props: AppMenuItemProps) => {
   return <div />
 }
+
+AppMenuItem.propTypes = AppMenuItemPropTypes
 
 export default AppMenuItem
