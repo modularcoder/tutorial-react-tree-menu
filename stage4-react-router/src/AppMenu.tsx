@@ -59,6 +59,7 @@ const AppMenu: React.FC = () => {
 
   return (
     <List component="nav" className={classes.appMenu} disablePadding>
+      {/* <AppMenuItem {...appMenuItems[0]} /> */}
       {appMenuItems.map((item, index) => (
         <AppMenuItem {...item} key={index} />
       ))}
