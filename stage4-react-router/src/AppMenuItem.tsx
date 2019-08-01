@@ -1,11 +1,10 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { SvgIconProps } from '@material-ui/core/SvgIcon'
-import { NavLink, NavLinkProps } from 'react-router-dom'
 
 import List from '@material-ui/core/List'
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem'
+
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
@@ -14,22 +13,7 @@ import Collapse from '@material-ui/core/Collapse'
 import IconExpandLess from '@material-ui/icons/ExpandLess'
 import IconExpandMore from '@material-ui/icons/ExpandMore'
 
-// NavLinkProps
-type MenuItemComponentProps = NavLinkProps & ListItemProps
-
-const MenuItemComponent = forwardRef<HTMLElement, Partial<MenuItemComponentProps>>(
-  (props: any, ref: any) => {
-    if (props.to && typeof props.to === 'string') {
-      return (
-        <NavLink innerRef={ref as any} to={'/test'} {...props}>
-          {props.children}
-        </NavLink>
-      )
-    } else {
-      return <div {...props} />
-    }
-  },
-)
+import AppMenuItemComponent from './AppMenuItemComponent'
 
 // React runtime PropTypes
 export const AppMenuItemPropTypes = {
@@ -47,7 +31,7 @@ export type AppMenuItemProps = PropTypes.InferProps<typeof AppMenuItemPropTypes>
 }
 
 const AppMenuItem: React.FC<AppMenuItemProps> = props => {
-  const { name, link = '', Icon, items = [] } = props
+  const { name, link, Icon, items = [] } = props
   const classes = useStyles()
   const isExpandable = items && items.length > 0
   const [open, setOpen] = React.useState(false)
@@ -57,13 +41,7 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
   }
 
   const MenuItemRoot = (
-    <ListItem
-      button
-      className={classes.menuItem}
-      onClick={handleClick}
-      to={link ? link : undefined}
-      component={MenuItemComponent}
-    >
+    <AppMenuItemComponent className={classes.menuItem} link={link} onClick={handleClick}>
       {/* Display an icon if any */}
       {!!Icon && (
         <ListItemIcon className={classes.menuItemIcon}>
@@ -74,7 +52,7 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
       {/* Display the expand menu if the item has children */}
       {isExpandable && !open && <IconExpandMore />}
       {isExpandable && open && <IconExpandLess />}
-    </ListItem>
+    </AppMenuItemComponent>
   )
 
   const MenuItemChildren = isExpandable ? (
