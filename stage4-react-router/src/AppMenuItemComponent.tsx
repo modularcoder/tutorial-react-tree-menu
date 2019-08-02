@@ -2,13 +2,13 @@ import React, { forwardRef } from 'react'
 import ListItem from '@material-ui/core/ListItem'
 import { NavLink, NavLinkProps } from 'react-router-dom'
 
-export interface ListItemComponentProps {
+export interface AppMenuItemComponentProps {
   className?: string
   link?: string | null // because the InferProps props allows alows null value
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
 }
 
-const ListItemComponent: React.FC<ListItemComponentProps> = props => {
+const AppMenuItemComponent: React.FC<AppMenuItemComponentProps> = props => {
   const { className, onClick, link, children } = props
 
   // If link is not set return the orinary ListItem
@@ -35,4 +35,4 @@ const ListItemComponent: React.FC<ListItemComponentProps> = props => {
   )
 }
 
-export default ListItemComponent
+export default AppMenuItemComponent

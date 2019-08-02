@@ -46,4 +46,7 @@ Stage 4
 
 https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage4-react-router
 
-https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage4-react-router?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenu.tsx
+https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage4-react-router?fontsize=14&hidenavigation=1&module=%2Fsrc%2FAppMenuItemComponent.tsx&view=editor
+
+
+https://codesandbox.io/s/github/modularcoder/tutorial-react-tree-menu/tree/master/stage4-react-router?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.tsx
