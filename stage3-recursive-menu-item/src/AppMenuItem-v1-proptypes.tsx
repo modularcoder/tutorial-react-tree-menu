@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SvgIconProps } from '@material-ui/core/SvgIcon'
 
 // React runtime PropTypes
 export const AppMenuItemPropTypes = {
@@ -12,7 +11,11 @@ export const AppMenuItemPropTypes = {
 
 // TypeScript compile-time props type, infered from propTypes
 // https://dev.to/busypeoples/notes-on-typescript-inferring-react-proptypes-1g88
-export type AppMenuItemProps = PropTypes.InferProps<typeof AppMenuItemPropTypes> & {
+type AppMenuItemPropTypes = PropTypes.InferProps<typeof AppMenuItemPropTypes>
+type AppMenuItemPropsWithoutItems = Omit<AppMenuItemPropTypes, 'items'>
+
+// Improve child items declaration
+export type AppMenuItemProps = AppMenuItemPropsWithoutItems & {
   items?: AppMenuItemProps[]
 }
 
