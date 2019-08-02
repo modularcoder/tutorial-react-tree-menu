@@ -14,7 +14,7 @@ import AppMenuItem from './AppMenuItem'
 const appMenuItems = [
   {
     name: 'Dashboard',
-    link: '/dashboard',
+    link: '/',
     Icon: IconDashboard,
   },
   {

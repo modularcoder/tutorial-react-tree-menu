@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import { Route, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
@@ -32,10 +32,12 @@ const App: React.FC = () => {
         <main className={classes.content}>
           <Container maxWidth="lg" className={classes.container}>
 
-            <Route path="/dashboard" component={PageDashboard} />
-            <Route path="/orders" component={PageOrders} />
-            <Route path="/customers" component={PageCustomers} />
-            <Route path="/reports" component={PageReports} />
+            <Switch>
+              <Route path="/" exact component={PageDashboard} />
+              <Route path="/orders" component={PageOrders} />
+              <Route path="/customers" component={PageCustomers} />
+              <Route path="/reports" component={PageReports} />
+            </Switch>
 
           </Container>
         </main>
